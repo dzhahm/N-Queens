@@ -2,7 +2,7 @@
 
 PositionsBlockedByQueen::PositionsBlockedByQueen(int boardSize, int queenRow, int queenColumn)
 {
-	AddPositions(boardSize, queenRow, queenColumn);
+	add_positions(boardSize, queenRow, queenColumn);
 }
 
 
@@ -24,12 +24,12 @@ std::vector<int> PositionsBlockedByQueen::get_blocked_positions() const
 // |X|X|Q|X|X| 
 // |_|X|X|X|_|
 // |X|_|X|_|X| 
-void PositionsBlockedByQueen::AddPositions(int boardSize, int queenRow, int queenColumn)
+void PositionsBlockedByQueen::add_positions(int boardSize, int queenRow, int queenColumn)
 {
-	AddBlockedRowPositions(boardSize, queenRow, queenColumn);
-	AddBlockedColumnPositions(boardSize, queenRow, queenColumn);
-	AddBlockedDiagonalRPositions(boardSize, queenRow, queenColumn);
-	AddBlockedDiagonalLPositions(boardSize, queenRow, queenColumn);
+	add_blocked_row_positions(boardSize, queenRow, queenColumn);
+	add_blocked_column_positions(boardSize, queenRow, queenColumn);
+	add_blocked_diagonal_r_positions(boardSize, queenRow, queenColumn);
+	add_blocked_diagonal_l_positions(boardSize, queenRow, queenColumn);
 }
 
 
@@ -40,7 +40,7 @@ void PositionsBlockedByQueen::AddPositions(int boardSize, int queenRow, int quee
 // |X|Q|X|X|X| 
 // |_|_|_|_|_|
 // |_|_|_|_|_| 
-void PositionsBlockedByQueen::AddBlockedRowPositions(int boardSize, int queenRow, int queenColumn)
+void PositionsBlockedByQueen::add_blocked_row_positions(int boardSize, int queenRow, int queenColumn)
 {
 	//Go through the row where the queen stands. From left to the right.
 	for (int i = 0; i < boardSize; i++)
@@ -60,7 +60,7 @@ void PositionsBlockedByQueen::AddBlockedRowPositions(int boardSize, int queenRow
 // |_|_|_|X|_| 
 // |_|_|_|Q|_|
 // |_|_|_|X|_| 
-void PositionsBlockedByQueen::AddBlockedColumnPositions(int boardSize, int queenRow, int queenColumn)
+void PositionsBlockedByQueen::add_blocked_column_positions(int boardSize, int queenRow, int queenColumn)
 {
 	//Go through the column where the queen stands. From bottom to the up.
 	for (int i = 0; i < boardSize; i++)
@@ -80,7 +80,7 @@ void PositionsBlockedByQueen::AddBlockedColumnPositions(int boardSize, int queen
 // |_|_|X|_|_| 
 // |_|Q|_|_|_|
 // |X|_|_|_|_| 
-void PositionsBlockedByQueen::AddBlockedDiagonalRPositions(int boardSize, int queenRow, int queenColumn)
+void PositionsBlockedByQueen::add_blocked_diagonal_r_positions(int boardSize, int queenRow, int queenColumn)
 {
 	int actualPos = boardSize * queenRow + queenColumn;
 
@@ -112,7 +112,7 @@ void PositionsBlockedByQueen::AddBlockedDiagonalRPositions(int boardSize, int qu
 // |_|_|X|_|_| 
 // |_|_|_|X|_|
 // |_|_|_|_|X| 
-void PositionsBlockedByQueen::AddBlockedDiagonalLPositions(int boardSize, int queenRow, int queenColumn)
+void PositionsBlockedByQueen::add_blocked_diagonal_l_positions(int boardSize, int queenRow, int queenColumn)
 {
 	int actual_pos = boardSize * queenRow + queenColumn;
 

@@ -23,7 +23,7 @@ private:
 	// |X|X|Q|X|X| 
 	// |_|X|X|X|_|
 	// |X|_|X|_|X| 
-	void AddPositions(int boardSize, int row, int column);
+	void add_positions(int boardSize, int row, int column);
 
 
 	// e.g Board size is 5, posX  = 1 , posY = 2
@@ -33,7 +33,7 @@ private:
 	// |X|Q|X|X|X| 
 	// |_|_|_|_|_|
 	// |_|_|_|_|_| 
-	void AddBlockedRowPositions(int boardSize, int row, int column);
+	void add_blocked_row_positions(int boardSize, int row, int column);
 
 
 	// 	e.g Board size is 5, posX  = 3 , posY = 1
@@ -43,7 +43,7 @@ private:
 	// |_|_|_|X|_| 
 	// |_|_|_|Q|_|
 	// |_|_|_|X|_| 
-	void AddBlockedColumnPositions(int boardSize, int row, int column);
+	void add_blocked_column_positions(int boardSize, int row, int column);
 
 
 	// e.g Board size is 5, posX  = 1 , posY = 1
@@ -53,7 +53,7 @@ private:
 	// |_|_|X|_|_| 
 	// |_|Q|_|_|_|
 	// |X|_|_|_|_| 
-	void AddBlockedDiagonalRPositions(int boardSize, int row, int column);
+	void add_blocked_diagonal_r_positions(int boardSize, int row, int column);
 
 
 	// e.g Board size is 5, posX  = 1 , posY = 3
@@ -63,5 +63,5 @@ private:
 	// |_|_|X|_|_| 
 	// |_|_|_|X|_|
 	// |_|_|_|_|X| 
-	void AddBlockedDiagonalLPositions(int boardSize, int row, int column);
+	void add_blocked_diagonal_l_positions(int boardSize, int row, int column);
 };

@@ -5,7 +5,7 @@
 ChessBoard::ChessBoard(int size)
 {
 	size_ = size;
-	InitBoard();
+	init_board();
 }
 
 bool ChessBoard::is_position_available(int row, int column)
@@ -26,7 +26,7 @@ bool ChessBoard::add_queen(int row, int column)
 	return true;
 }
 
-void ChessBoard::InitBoard()
+void ChessBoard::init_board()
 {
 	const int size = size_ * size_;
 	for (int i = 0; i < size; i++)
@@ -43,7 +43,6 @@ void ChessBoard::copy_board(ChessBoard board_to_be_copied)
 		board.insert(board.end(), board_to_be_copied.board.begin(), board_to_be_copied.board.end());
 	}
 }
-
 
 void ChessBoard::update_blocked_positions(int row, int column)
 {

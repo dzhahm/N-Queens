@@ -8,7 +8,7 @@ Iteration::Iteration(int boardSize, Iteration* previousIteration, int queenRow, 
 	queenColumn_ = queenColumn;
 	previousIteration_ = previousIteration;
 	actualBoard_.copy_board(previousIteration_->actualBoard_);
-	addQueenOnTheBoard();
+	add_queen_on_the_board();
 }
 
 Iteration::Iteration(int boardSize, int queenRow, int queenColumn)
@@ -17,11 +17,11 @@ Iteration::Iteration(int boardSize, int queenRow, int queenColumn)
 	actualBoard_ = ChessBoard(board_size_);
 	queenRow_ = queenRow;
 	queenColumn_ = queenColumn;
-	addQueenOnTheBoard();
+	add_queen_on_the_board();
 }
 
 
-void Iteration::addQueenOnTheBoard()
+void Iteration::add_queen_on_the_board()
 {
 	actualBoard_.add_queen(queenRow_, queenColumn_);
 	if (queenRow_ < board_size_ - 1)

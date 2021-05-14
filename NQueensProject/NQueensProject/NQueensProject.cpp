@@ -9,7 +9,7 @@ int main()
 {
 	int boardSize = 8;
 
-	Iteration testIteration = Iteration(boardSize, 0, 0);
+	Iteration testIteration = Iteration(boardSize, 0, 7);
 
 	PrintResult print_result = PrintResult(boardSize, testIteration.solution.board);
 

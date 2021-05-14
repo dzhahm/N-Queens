@@ -10,7 +10,7 @@ public:
 	ChessBoard actualBoard_ = ChessBoard(0);
 	std::vector<int> find_possible_queen_column_positions();
 
-	void addQueenOnTheBoard();
+	void add_queen_on_the_board();
 
 	void new_iteration();
 

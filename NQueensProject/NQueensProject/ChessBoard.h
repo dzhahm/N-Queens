@@ -26,7 +26,7 @@ public:
 
 private:
 
-	void InitBoard();
+	void init_board();
 
 	void update_blocked_positions(int posX, int posY);
 };
