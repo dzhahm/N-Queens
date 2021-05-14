@@ -9,12 +9,12 @@ public:
 	PositionsBlockedByQueen(int boardSize, int row, int column);
 	std::vector<int> get_blocked_positions() const;
 
-private:
-
 	std::vector<int> blocked_row_positions;
 	std::vector<int> blocked_column_positions;
 	std::vector<int> blocked_diagonal_r_positions;
 	std::vector<int> blocked_diagonal_l_positions;
+
+private:
 
 	// e.g Board size is 5, posX  = 2 , posY = 2
 	//	_ _ _ _ _
