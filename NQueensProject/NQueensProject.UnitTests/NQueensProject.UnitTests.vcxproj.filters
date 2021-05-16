@@ -36,6 +36,9 @@
     <ClCompile Include="PositionsInTheDiagonalR.cpp">
       <Filter>Source Files\FindingPositionsBlockedByQueen</Filter>
     </ClCompile>
+    <ClCompile Include="FindingAllPositions.cpp">
+      <Filter>Source Files\FindingPositionsBlockedByQueen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

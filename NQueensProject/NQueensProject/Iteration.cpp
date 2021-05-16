@@ -1,22 +1,22 @@
 #include "Iteration.h"
 
-Iteration::Iteration(int boardSize, Iteration* previousIteration, int queenRow, int queenColumn)
+Iteration::Iteration(int board_size, Iteration* previous_iteration, int queen_row, int queen_column)
 {
-	board_size_ = boardSize;
-	actualBoard_ = ChessBoard(board_size_);
-	queenRow_ = queenRow;
-	queenColumn_ = queenColumn;
-	previousIteration_ = previousIteration;
+	board_size_ = board_size;
+	actualBoard_ = chess_board(board_size_);
+	queenRow_ = queen_row;
+	queenColumn_ = queen_column;
+	previousIteration_ = previous_iteration;
 	actualBoard_.copy_board(previousIteration_->actualBoard_);
 	add_queen_on_the_board();
 }
 
-Iteration::Iteration(int boardSize, int queenRow, int queenColumn)
+Iteration::Iteration(int board_size, int queen_row, int queen_column)
 {
-	board_size_ = boardSize;
-	actualBoard_ = ChessBoard(board_size_);
-	queenRow_ = queenRow;
-	queenColumn_ = queenColumn;
+	board_size_ = board_size;
+	actualBoard_ = chess_board(board_size_);
+	queenRow_ = queen_row;
+	queenColumn_ = queen_column;
 	add_queen_on_the_board();
 }
 
@@ -36,7 +36,7 @@ void Iteration::add_queen_on_the_board()
 	}
 }
 
-void Iteration::trace_back_solution()
+void Iteration::trace_back_solution() const
 {
 	if (queenRow_ == 0)
 	{
